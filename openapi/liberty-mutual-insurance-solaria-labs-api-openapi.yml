@@ -1,0 +1,159 @@
+openapi: 3.1.0
+info:
+  title: Liberty Mutual Solaria Labs API
+  description: >-
+    The Solaria Labs API aggregates public data on auto theft, parking
+    citations, and crashes with proprietary insurance knowledge to identify
+    safest routes and parking locations.
+  version: 1.0.0
+  contact:
+    name: Liberty Mutual Solaria Labs
+    url: https://developer.libertymutual.com/
+servers:
+  - url: https://developers.solarialabs.com
+    description: Production
+paths:
+  /safety/routes:
+    get:
+      operationId: getSafeRoutes
+      summary: Get Safe Routes
+      description: Retrieve safest driving routes for a given area.
+      tags:
+        - Safety
+      parameters:
+        - name: city
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: origin
+          in: query
+          schema:
+            type: string
+        - name: destination
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteList'
+  /safety/parking:
+    get:
+      operationId: getSafeParking
+      summary: Get Safe Parking
+      description: Retrieve safest parking locations in a city.
+      tags:
+        - Safety
+      parameters:
+        - name: city
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ParkingList'
+  /data/incidents:
+    get:
+      operationId: getIncidents
+      summary: Get Incidents
+      description: Retrieve auto theft, crash, and citation data.
+      tags:
+        - Data
+      parameters:
+        - name: city
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum:
+              - theft
+              - crash
+              - citation
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IncidentList'
+tags:
+  - name: Safety
+    description: Safety analysis operations
+  - name: Data
+    description: Incident data operations
+components:
+  schemas:
+    Route:
+      type: object
+      properties:
+        id:
+          type: string
+        origin:
+          type: string
+        destination:
+          type: string
+        safetyScore:
+          type: number
+        distance:
+          type: number
+    RouteList:
+      type: object
+      properties:
+        routes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Route'
+    ParkingLocation:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        address:
+          type: string
+        safetyScore:
+          type: number
+        theftRate:
+          type: number
+    ParkingList:
+      type: object
+      properties:
+        locations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParkingLocation'
+    Incident:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+        location:
+          type: string
+        date:
+          type: string
+          format: date
+        description:
+          type: string
+    IncidentList:
+      type: object
+      properties:
+        incidents:
+          type: array
+          items:
+            $ref: '#/components/schemas/Incident'
