@@ -1,0 +1,141 @@
+openapi: 3.1.0
+info:
+  title: Liberty Mutual Renters Insurance API
+  description: >-
+    The Liberty Mutual Renters Insurance API enables partners to offer
+    affordable renters insurance with an easy quote and bind experience.
+  version: 1.0.0
+  contact:
+    name: Liberty Mutual
+    url: https://developer.libertymutual.com/
+servers:
+  - url: https://api.libertymutual.com
+    description: Production
+paths:
+  /quotes:
+    post:
+      operationId: createQuote
+      summary: Create Quote
+      description: Generate a renters insurance quote.
+      tags:
+        - Quotes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QuoteRequest'
+      responses:
+        '200':
+          description: Quote generated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quote'
+  /quotes/{quoteId}:
+    get:
+      operationId: getQuote
+      summary: Get Quote
+      description: Retrieve a specific insurance quote.
+      tags:
+        - Quotes
+      parameters:
+        - name: quoteId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quote'
+  /policies:
+    post:
+      operationId: bindPolicy
+      summary: Bind Policy
+      description: Bind a quote to create a renters insurance policy.
+      tags:
+        - Policies
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BindRequest'
+      responses:
+        '201':
+          description: Policy created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Policy'
+tags:
+  - name: Quotes
+    description: Insurance quote operations
+  - name: Policies
+    description: Policy management operations
+components:
+  schemas:
+    QuoteRequest:
+      type: object
+      properties:
+        address:
+          type: object
+          properties:
+            street:
+              type: string
+            city:
+              type: string
+            state:
+              type: string
+            zip:
+              type: string
+        coverageAmount:
+          type: number
+        deductible:
+          type: number
+    Quote:
+      type: object
+      properties:
+        quoteId:
+          type: string
+        premium:
+          type: number
+        coverageAmount:
+          type: number
+        deductible:
+          type: number
+        term:
+          type: string
+        expiresAt:
+          type: string
+          format: date-time
+    BindRequest:
+      type: object
+      properties:
+        quoteId:
+          type: string
+        paymentMethod:
+          type: object
+          properties:
+            type:
+              type: string
+            last4:
+              type: string
+    Policy:
+      type: object
+      properties:
+        policyId:
+          type: string
+        quoteId:
+          type: string
+        status:
+          type: string
+        effectiveDate:
+          type: string
+          format: date
+        premium:
+          type: number
