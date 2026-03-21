@@ -1,0 +1,43 @@
+aid: liberty-mutual-insurance
+url: https://raw.githubusercontent.com/api-evangelist/liberty-mutual-insurance/refs/heads/main/apis.yml
+apis:
+  - aid: liberty-mutual-insurance:renters-insurance-api
+    name: Liberty Mutual Renters Insurance API
+    tags:
+      - Insurance
+      - Renters
+      - Quote
+      - Bind
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.libertymutual.com
+    humanURL: https://www.libertymutual.com/renters-api
+    properties:
+      - url: https://www.libertymutual.com/renters-api
+        type: Documentation
+      - url: openapi/liberty-mutual-insurance-renters-insurance-api-openapi.yml
+        type: OpenAPI
+    description: >-
+      The Liberty Mutual Renters Insurance API streamlines the process to
+      purchase coverage, allowing partners to offer affordable renters
+      insurance to customers, tenants, and employees with an easy quote
+      and bind experience integrated into websites, apps, or tools.
+  - aid: liberty-mutual-insurance:solaria-labs-api
+    name: Liberty Mutual Solaria Labs API
+    tags:
+      - Insurance
+      - Data Analytics
+      - Safety
+      - Innovation
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://developers.solarialabs.com
+    humanURL: https://developer.libertymutual.com/
+    properties:
+      - url: https://developer.libertymutual.com/
+        type: Documentation
+      - url: openapi/liberty-mutual-insurance-solaria-labs-api-openapi.yml
+        type: OpenAPI
+    description: >-
+      The Liberty Mutual Solaria Labs API aggregates public data on auto theft,
+      parking citations, and crashes using proprietary insurance knowledge.
+      Developers and data scientists can analyze the data to identify safest
+      driving routes and places to park in major US cities.
