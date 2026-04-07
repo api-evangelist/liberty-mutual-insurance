@@ -1,5 +1,6 @@
 aid: liberty-mutual-insurance
-url: https://raw.githubusercontent.com/api-evangelist/liberty-mutual-insurance/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/liberty-mutual-insurance/refs/heads/main/apis.yml
 apis:
   - aid: liberty-mutual-insurance:renters-insurance-api
     name: Liberty Mutual Renters Insurance API
@@ -8,7 +9,8 @@ apis:
       - Renters
       - Quote
       - Bind
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.libertymutual.com
     humanURL: https://www.libertymutual.com/renters-api
     properties:
@@ -28,7 +30,8 @@ apis:
       - Data Analytics
       - Safety
       - Innovation
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://developers.solarialabs.com
     humanURL: https://developer.libertymutual.com/
     properties:
@@ -41,3 +44,7 @@ apis:
       parking citations, and crashes using proprietary insurance knowledge.
       Developers and data scientists can analyze the data to identify safest
       driving routes and places to park in major US cities.
+description: >-
+  Offer affordable renters insurance to your customers, tenants, and employees using
+  our API. Reduce friction with an easy quote and bind experience on your website,
+  app, or tool. Only 10 simple questions to get a quote.
