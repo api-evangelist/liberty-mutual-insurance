@@ -1,16 +1,14 @@
 aid: liberty-mutual-insurance
-url: 
-  https://raw.githubusercontent.com/api-evangelist/liberty-mutual-insurance/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/liberty-mutual-insurance/refs/heads/main/apis.yml
 apis:
   - aid: liberty-mutual-insurance:renters-insurance-api
     name: Liberty Mutual Renters Insurance API
     tags:
-      - Insurance
-      - Renters
-      - Quote
       - Bind
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Insurance
+      - Quote
+      - Renters
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.libertymutual.com
     humanURL: https://www.libertymutual.com/renters-api
     properties:
@@ -26,12 +24,11 @@ apis:
   - aid: liberty-mutual-insurance:solaria-labs-api
     name: Liberty Mutual Solaria Labs API
     tags:
-      - Insurance
       - Data Analytics
-      - Safety
       - Innovation
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Insurance
+      - Safety
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://developers.solarialabs.com
     humanURL: https://developer.libertymutual.com/
     properties:

@@ -73,10 +73,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/Policy'
 tags:
-  - name: Quotes
-    description: Insurance quote operations
   - name: Policies
     description: Policy management operations
+  - name: Quotes
+    description: Insurance quote operations
 components:
   schemas:
     QuoteRequest:
