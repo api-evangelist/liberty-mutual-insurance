@@ -1,0 +1,138 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Liberty Mutual Renters Insurance API
+  description: The Liberty Mutual Renters Insurance API enables partners to offer affordable renters insurance with an easy
+    quote and bind experience.
+  tags:
+  - Liberty
+  - Mutual
+  - Insurance
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: liberty-mutual-insurance
+    baseUri: https://api.libertymutual.com
+    description: Liberty Mutual Renters Insurance API HTTP API.
+    resources:
+    - name: quotes
+      path: /quotes
+      operations:
+      - name: createquote
+        method: POST
+        description: Create Quote
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: quotes-quoteid
+      path: /quotes/{quoteId}
+      operations:
+      - name: getquote
+        method: GET
+        description: Get Quote
+        inputParameters:
+        - name: quoteId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: policies
+      path: /policies
+      operations:
+      - name: bindpolicy
+        method: POST
+        description: Bind Policy
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: liberty-mutual-insurance-rest
+    description: REST adapter for Liberty Mutual Renters Insurance API.
+    resources:
+    - path: /quotes
+      name: createquote
+      operations:
+      - method: POST
+        name: createquote
+        description: Create Quote
+        call: liberty-mutual-insurance.createquote
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /quotes/{quoteId}
+      name: getquote
+      operations:
+      - method: GET
+        name: getquote
+        description: Get Quote
+        call: liberty-mutual-insurance.getquote
+        with:
+          quoteId: rest.quoteId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /policies
+      name: bindpolicy
+      operations:
+      - method: POST
+        name: bindpolicy
+        description: Bind Policy
+        call: liberty-mutual-insurance.bindpolicy
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: liberty-mutual-insurance-mcp
+    transport: http
+    description: MCP adapter for Liberty Mutual Renters Insurance API for AI agent use.
+    tools:
+    - name: createquote
+      description: Create Quote
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: liberty-mutual-insurance.createquote
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getquote
+      description: Get Quote
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: liberty-mutual-insurance.getquote
+      with:
+        quoteId: tools.quoteId
+      inputParameters:
+      - name: quoteId
+        type: string
+        description: quoteId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: bindpolicy
+      description: Bind Policy
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: liberty-mutual-insurance.bindpolicy
+      outputParameters:
+      - type: object
+        mapping: $.
