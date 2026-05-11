@@ -71,6 +71,10 @@ common:
     url: https://www.libertymutual.com/about-lm
   - type: News
     url: https://www.libertymutual.com/about-lm/newsroom
+  - type: Integrations
+    url: https://www.libertymutual.com/ecosystem
+integrations:
+  - name: decorative affinity hero
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
