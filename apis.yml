@@ -7,7 +7,7 @@ description: >-
   automobile, homeowners, workers compensation, and commercial lines, and
   exposes API-based insurance solutions for partners across the insurance
   lifecycle from quote-and-purchase through policyholder service and claims.
-type: Contract
+kind: contract
 position: Producer
 access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
