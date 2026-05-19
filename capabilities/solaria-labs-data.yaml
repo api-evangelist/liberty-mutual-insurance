@@ -1,0 +1,81 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Liberty Mutual Solaria Labs API — Data
+  description: 'Liberty Mutual Solaria Labs API — Data. 1 operations. Lead operation: Get Incidents. Self-contained Naftiko
+    capability covering one Liberty Mutual Insurance business surface.'
+  tags:
+  - Liberty Mutual Insurance
+  - Data
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    LIBERTY_MUTUAL_INSURANCE_API_KEY: LIBERTY_MUTUAL_INSURANCE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: solaria-labs-data
+    baseUri: https://developers.solarialabs.com
+    description: Liberty Mutual Solaria Labs API — Data business capability. Self-contained, no shared references.
+    resources:
+    - name: data-incidents
+      path: /data/incidents
+      operations:
+      - name: getincidents
+        method: GET
+        description: Get Incidents
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: city
+          in: query
+          type: string
+          required: true
+        - name: type
+          in: query
+          type: string
+  exposes:
+  - type: rest
+    namespace: solaria-labs-data-rest
+    port: 8080
+    description: REST adapter for Liberty Mutual Solaria Labs API — Data. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/data/incidents
+      name: data-incidents
+      description: REST surface for data-incidents.
+      operations:
+      - method: GET
+        name: getincidents
+        description: Get Incidents
+        call: solaria-labs-data.getincidents
+        with:
+          city: rest.city
+          type: rest.type
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: solaria-labs-data-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Liberty Mutual Solaria Labs API — Data. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: get-incidents
+      description: Get Incidents
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: solaria-labs-data.getincidents
+      with:
+        city: tools.city
+        type: tools.type
+      outputParameters:
+      - type: object
+        mapping: $.
