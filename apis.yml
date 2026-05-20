@@ -9,75 +9,77 @@ position: Producer
 access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Casualty
-- Commercial Lines
-- Insurance
-- Personal Lines
-- Property
-- Renters
-- Safety Data
+  - Casualty
+  - Commercial Lines
+  - Insurance
+  - Personal Lines
+  - Property
+  - Renters
+  - Safety Data
 created: '2026-03-21'
 modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/liberty-mutual-insurance/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-- aid: liberty-mutual-insurance:renters-insurance-api
-  name: Liberty Mutual Renters Insurance API
-  description: The Liberty Mutual Renters Insurance API streamlines the process to purchase coverage, allowing partners to
-    offer affordable renters insurance to customers, tenants, and employees with an easy quote and bind experience integrated
-    into websites, apps, or tools.
-  humanURL: https://www.libertymutual.com/renters-api
-  baseURL: https://api.libertymutual.com
-  tags:
-  - Bind
-  - Insurance
-  - Quote
-  - Renters
-  properties:
-  - type: Documentation
-    url: https://www.libertymutual.com/renters-api
-  - type: OpenAPI
-    url: openapi/liberty-mutual-insurance-renters-insurance-api-openapi.yml
-  - type: NaftikoCapability
-    url: capabilities/renters-insurance-policies.yaml
-  - type: NaftikoCapability
-    url: capabilities/renters-insurance-quotes.yaml
-- aid: liberty-mutual-insurance:solaria-labs-api
-  name: Liberty Mutual Solaria Labs API
-  description: The Liberty Mutual Solaria Labs API aggregates public data on auto theft, parking citations, and crashes using
-    proprietary insurance knowledge. Developers and data scientists can analyze the data to identify safest driving routes
-    and places to park in major US cities.
-  humanURL: https://developer.libertymutual.com/
-  baseURL: https://developers.solarialabs.com
-  tags:
-  - Data Analytics
-  - Innovation
-  - Insurance
-  - Safety
-  properties:
-  - type: Documentation
-    url: https://developer.libertymutual.com/
-  - type: OpenAPI
-    url: openapi/liberty-mutual-insurance-solaria-labs-api-openapi.yml
-  - type: NaftikoCapability
-    url: capabilities/solaria-labs-data.yaml
-  - type: NaftikoCapability
-    url: capabilities/solaria-labs-safety.yaml
+  - aid: liberty-mutual-insurance:renters-insurance-api
+    name: Liberty Mutual Renters Insurance API
+    description: The Liberty Mutual Renters Insurance API streamlines the process to purchase coverage, allowing partners to
+      offer affordable renters insurance to customers, tenants, and employees with an easy quote and bind experience integrated
+      into websites, apps, or tools.
+    humanURL: https://www.libertymutual.com/renters-api
+    baseURL: https://api.libertymutual.com
+    tags:
+    - Bind
+    - Insurance
+    - Quote
+    - Renters
+    properties:
+    - type: Documentation
+      url: https://www.libertymutual.com/renters-api
+    - type: OpenAPI
+      url: openapi/liberty-mutual-insurance-renters-insurance-api-openapi.yml
+    - type: NaftikoCapability
+      url: capabilities/renters-insurance-policies.yaml
+    - type: NaftikoCapability
+      url: capabilities/renters-insurance-quotes.yaml
+  - aid: liberty-mutual-insurance:solaria-labs-api
+    name: Liberty Mutual Solaria Labs API
+    description: The Liberty Mutual Solaria Labs API aggregates public data on auto theft, parking citations, and crashes using
+      proprietary insurance knowledge. Developers and data scientists can analyze the data to identify safest driving routes
+      and places to park in major US cities.
+    humanURL: https://developer.libertymutual.com/
+    baseURL: https://developers.solarialabs.com
+    tags:
+    - Data Analytics
+    - Innovation
+    - Insurance
+    - Safety
+    properties:
+    - type: Documentation
+      url: https://developer.libertymutual.com/
+    - type: OpenAPI
+      url: openapi/liberty-mutual-insurance-solaria-labs-api-openapi.yml
+    - type: NaftikoCapability
+      url: capabilities/solaria-labs-data.yaml
+    - type: NaftikoCapability
+      url: capabilities/solaria-labs-safety.yaml
 common:
-- type: LinkedIn
-  url: https://www.linkedin.com/company/liberty-mutual-insurance
-- type: Website
-  url: https://www.libertymutual.com/
-- type: Developer
-  url: https://developer.libertymutual.com/
-- type: About
-  url: https://www.libertymutual.com/about-lm
-- type: News
-  url: https://www.libertymutual.com/about-lm/newsroom
-- type: Integrations
-  url: https://www.libertymutual.com/ecosystem
+  - type: GitHubOrganization
+    url: https://github.com/libertymutual
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/liberty-mutual-insurance
+  - type: Website
+    url: https://www.libertymutual.com/
+  - type: Developer
+    url: https://developer.libertymutual.com/
+  - type: About
+    url: https://www.libertymutual.com/about-lm
+  - type: News
+    url: https://www.libertymutual.com/about-lm/newsroom
+  - type: Integrations
+    url: https://www.libertymutual.com/ecosystem
 integrations:
-- name: decorative affinity hero
+  - name: decorative affinity hero
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
