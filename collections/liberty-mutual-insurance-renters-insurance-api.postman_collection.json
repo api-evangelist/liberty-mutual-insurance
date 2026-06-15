@@ -1,0 +1,313 @@
+{
+  "item": [
+    {
+      "id": "8f435f41-15aa-438e-9e86-760175283d19",
+      "name": "Policies",
+      "description": {
+        "content": "Policy management operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c7cd19be-d428-4ab4-90ed-ad3b703eaa16",
+          "name": "Bind Policy",
+          "request": {
+            "name": "Bind Policy",
+            "description": {
+              "content": "Bind a quote to create a renters insurance policy.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quoteId\": \"<string>\",\n  \"paymentMethod\": {\n    \"type\": \"<string>\",\n    \"last4\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "33b0e312-187e-402a-adc1-4481b1fb3ce5",
+              "name": "Policy created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"quoteId\": \"<string>\",\n  \"paymentMethod\": {\n    \"type\": \"<string>\",\n    \"last4\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"policyId\": \"string\",\n  \"quoteId\": \"string\",\n  \"status\": \"string\",\n  \"effectiveDate\": \"1999-06-10\",\n  \"premium\": 1571.807048425854\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "d148f7d0-07b7-41a3-9331-ccdb9835fb5a",
+      "name": "Quotes",
+      "description": {
+        "content": "Insurance quote operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "47f2c2dd-bc00-4764-b60e-e6b20380f30a",
+          "name": "Create Quote",
+          "request": {
+            "name": "Create Quote",
+            "description": {
+              "content": "Generate a renters insurance quote.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "quotes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"zip\": \"<string>\"\n  },\n  \"coverageAmount\": \"<number>\",\n  \"deductible\": \"<number>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "fbf88a3b-e38d-407d-be78-a8aae0cf701b",
+              "name": "Quote generated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quotes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"zip\": \"<string>\"\n  },\n  \"coverageAmount\": \"<number>\",\n  \"deductible\": \"<number>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"quoteId\": \"string\",\n  \"premium\": 6851.647634465752,\n  \"coverageAmount\": 2620.7626707196196,\n  \"deductible\": 6832.1832557025855,\n  \"term\": \"string\",\n  \"expiresAt\": \"2025-10-10T19:04:17.699Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e3961501-285a-4f40-9d4e-cd415fbb1bbf",
+          "name": "Get Quote",
+          "request": {
+            "name": "Get Quote",
+            "description": {
+              "content": "Retrieve a specific insurance quote.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "quotes",
+                ":quoteId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "quoteId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b34a7ed9-6601-40eb-8aed-b5c1d47b497d",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quotes",
+                    ":quoteId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "quoteId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"quoteId\": \"string\",\n  \"premium\": 6851.647634465752,\n  \"coverageAmount\": 2620.7626707196196,\n  \"deductible\": 6832.1832557025855,\n  \"term\": \"string\",\n  \"expiresAt\": \"2025-10-10T19:04:17.699Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.libertymutual.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "4a780209-2915-437f-b8fc-f38f5b4f817d",
+    "name": "Liberty Mutual Renters Insurance API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Liberty Mutual Renters Insurance API enables partners to offer affordable renters insurance with an easy quote and bind experience.\n\nContact Support:\n Name: Liberty Mutual",
+      "type": "text/plain"
+    }
+  }
+}

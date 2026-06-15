@@ -1,0 +1,95 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Liberty Mutual Solaria Labs API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Safety",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Safe Routes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developers.solarialabs.com/safety/routes",
+            "params": [
+              {
+                "name": "city",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "origin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "destination",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve safest driving routes for a given area."
+        },
+        {
+          "info": {
+            "name": "Get Safe Parking",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developers.solarialabs.com/safety/parking",
+            "params": [
+              {
+                "name": "city",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve safest parking locations in a city."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Data",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Incidents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developers.solarialabs.com/data/incidents",
+            "params": [
+              {
+                "name": "city",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve auto theft, crash, and citation data."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

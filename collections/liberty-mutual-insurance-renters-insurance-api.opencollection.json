@@ -1,0 +1,74 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Liberty Mutual Renters Insurance API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Quotes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Quote",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.libertymutual.com/quotes",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Generate a renters insurance quote."
+        },
+        {
+          "info": {
+            "name": "Get Quote",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.libertymutual.com/quotes/:quoteId",
+            "params": [
+              {
+                "name": "quoteId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific insurance quote."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Policies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Bind Policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.libertymutual.com/policies",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Bind a quote to create a renters insurance policy."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
