@@ -1,0 +1,105 @@
+openapi: 3.1.0
+info:
+  title: Liberty Mutual Renters Insurance Data Safety API
+  description: The Liberty Mutual Renters Insurance API enables partners to offer affordable renters insurance with an easy quote and bind experience.
+  version: 1.0.0
+  contact:
+    name: Liberty Mutual
+    url: https://developer.libertymutual.com/
+servers:
+- url: https://api.libertymutual.com
+  description: Production
+tags:
+- name: Safety
+  description: Safety analysis operations
+paths:
+  /safety/routes:
+    get:
+      operationId: getSafeRoutes
+      summary: Get Safe Routes
+      description: Retrieve safest driving routes for a given area.
+      tags:
+      - Safety
+      parameters:
+      - name: city
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: origin
+        in: query
+        schema:
+          type: string
+      - name: destination
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteList'
+  /safety/parking:
+    get:
+      operationId: getSafeParking
+      summary: Get Safe Parking
+      description: Retrieve safest parking locations in a city.
+      tags:
+      - Safety
+      parameters:
+      - name: city
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ParkingList'
+components:
+  schemas:
+    ParkingLocation:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        address:
+          type: string
+        safetyScore:
+          type: number
+        theftRate:
+          type: number
+    RouteList:
+      type: object
+      properties:
+        routes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Route'
+    ParkingList:
+      type: object
+      properties:
+        locations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParkingLocation'
+    Route:
+      type: object
+      properties:
+        id:
+          type: string
+        origin:
+          type: string
+        destination:
+          type: string
+        safetyScore:
+          type: number
+        distance:
+          type: number

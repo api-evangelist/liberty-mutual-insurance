@@ -1,0 +1,63 @@
+openapi: 3.1.0
+info:
+  title: Liberty Mutual Renters Insurance Data Policies API
+  description: The Liberty Mutual Renters Insurance API enables partners to offer affordable renters insurance with an easy quote and bind experience.
+  version: 1.0.0
+  contact:
+    name: Liberty Mutual
+    url: https://developer.libertymutual.com/
+servers:
+- url: https://api.libertymutual.com
+  description: Production
+tags:
+- name: Policies
+  description: Policy management operations
+paths:
+  /policies:
+    post:
+      operationId: bindPolicy
+      summary: Bind Policy
+      description: Bind a quote to create a renters insurance policy.
+      tags:
+      - Policies
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BindRequest'
+      responses:
+        '201':
+          description: Policy created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Policy'
+components:
+  schemas:
+    BindRequest:
+      type: object
+      properties:
+        quoteId:
+          type: string
+        paymentMethod:
+          type: object
+          properties:
+            type:
+              type: string
+            last4:
+              type: string
+    Policy:
+      type: object
+      properties:
+        policyId:
+          type: string
+        quoteId:
+          type: string
+        status:
+          type: string
+        effectiveDate:
+          type: string
+          format: date
+        premium:
+          type: number

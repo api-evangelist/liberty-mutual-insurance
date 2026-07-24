@@ -1,0 +1,66 @@
+openapi: 3.1.0
+info:
+  title: Liberty Mutual Renters Insurance Data API
+  description: The Liberty Mutual Renters Insurance API enables partners to offer affordable renters insurance with an easy quote and bind experience.
+  version: 1.0.0
+  contact:
+    name: Liberty Mutual
+    url: https://developer.libertymutual.com/
+servers:
+- url: https://api.libertymutual.com
+  description: Production
+tags:
+- name: Data
+  description: Incident data operations
+paths:
+  /data/incidents:
+    get:
+      operationId: getIncidents
+      summary: Get Incidents
+      description: Retrieve auto theft, crash, and citation data.
+      tags:
+      - Data
+      parameters:
+      - name: city
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: type
+        in: query
+        schema:
+          type: string
+          enum:
+          - theft
+          - crash
+          - citation
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IncidentList'
+components:
+  schemas:
+    Incident:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+        location:
+          type: string
+        date:
+          type: string
+          format: date
+        description:
+          type: string
+    IncidentList:
+      type: object
+      properties:
+        incidents:
+          type: array
+          items:
+            $ref: '#/components/schemas/Incident'
