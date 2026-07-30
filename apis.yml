@@ -6,9 +6,21 @@ description: >-
   homeowners, workers compensation, and commercial lines, and exposes API-based insurance solutions for partners across
   the insurance lifecycle from quote-and-purchase through policyholder service and claims.
 kind: contract
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Producer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/liberty-mutual-insurance.png
 tags:
   - Casualty
   - Commercial Lines
@@ -23,42 +35,62 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/liberty-mutual-insurance/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: liberty-mutual-insurance:renters-insurance-api
-    name: Liberty Mutual Renters Insurance API
-    description: >-
-      The Liberty Mutual Renters Insurance API streamlines the process to purchase coverage, allowing partners to offer
-      affordable renters insurance to customers, tenants, and employees with an easy quote and bind experience
-      integrated into websites, apps, or tools.
-    humanURL: https://www.libertymutual.com/renters-api
-    baseURL: https://api.libertymutual.com
-    tags:
-      - Bind
-      - Insurance
-      - Quote
-      - Renters
-    properties:
-      - type: Documentation
-        url: https://www.libertymutual.com/renters-api
-      - type: OpenAPI
-        url: openapi/liberty-mutual-insurance-renters-insurance-api-openapi.yml
-  - aid: liberty-mutual-insurance:solaria-labs-api
-    name: Liberty Mutual Solaria Labs API
-    description: >-
-      The Liberty Mutual Solaria Labs API aggregates public data on auto theft, parking citations, and crashes using
-      proprietary insurance knowledge. Developers and data scientists can analyze the data to identify safest driving
-      routes and places to park in major US cities.
-    humanURL: https://developer.libertymutual.com/
-    baseURL: https://developers.solarialabs.com
-    tags:
-      - Data Analytics
-      - Innovation
-      - Insurance
-      - Safety
-    properties:
-      - type: Documentation
-        url: https://developer.libertymutual.com/
-      - type: OpenAPI
-        url: openapi/liberty-mutual-insurance-solaria-labs-api-openapi.yml
+- aid: liberty-mutual-insurance:liberty-mutual-insurance-data-api
+  name: Liberty Mutual Insurance Data API
+  description: Incident data operations
+  humanURL: https://www.libertymutual.com/renters-api
+  baseURL: https://api.libertymutual.com
+  tags:
+  - Data
+  properties:
+  - type: OpenAPI
+    url: openapi/liberty-mutual-insurance-data-api-openapi.yml
+  - type: Documentation
+    url: https://www.libertymutual.com/renters-api
+  - type: Documentation
+    url: https://developer.libertymutual.com/
+- aid: liberty-mutual-insurance:liberty-mutual-insurance-policies-api
+  name: Liberty Mutual Insurance Policies API
+  description: Policy management operations
+  humanURL: https://www.libertymutual.com/renters-api
+  baseURL: https://api.libertymutual.com
+  tags:
+  - Policies
+  properties:
+  - type: OpenAPI
+    url: openapi/liberty-mutual-insurance-policies-api-openapi.yml
+  - type: Documentation
+    url: https://www.libertymutual.com/renters-api
+  - type: Documentation
+    url: https://developer.libertymutual.com/
+- aid: liberty-mutual-insurance:liberty-mutual-insurance-quotes-api
+  name: Liberty Mutual Insurance Quotes API
+  description: Insurance quote operations
+  humanURL: https://www.libertymutual.com/renters-api
+  baseURL: https://api.libertymutual.com
+  tags:
+  - Quotes
+  properties:
+  - type: OpenAPI
+    url: openapi/liberty-mutual-insurance-quotes-api-openapi.yml
+  - type: Documentation
+    url: https://www.libertymutual.com/renters-api
+  - type: Documentation
+    url: https://developer.libertymutual.com/
+- aid: liberty-mutual-insurance:liberty-mutual-insurance-safety-api
+  name: Liberty Mutual Insurance Safety API
+  description: Safety analysis operations
+  humanURL: https://www.libertymutual.com/renters-api
+  baseURL: https://api.libertymutual.com
+  tags:
+  - Safety
+  properties:
+  - type: OpenAPI
+    url: openapi/liberty-mutual-insurance-safety-api-openapi.yml
+  - type: Documentation
+    url: https://www.libertymutual.com/renters-api
+  - type: Documentation
+    url: https://developer.libertymutual.com/
 common:
   - type: AgenticAccess
     url: agentic-access/liberty-mutual-insurance-agentic-access.yml
