@@ -1,0 +1,20 @@
+{
+  "provider": "liberty-mutual-insurance",
+  "sources": [
+    "liberty-mutual-insurance-data-api-openapi.yml",
+    "liberty-mutual-insurance-policies-api-openapi.yml",
+    "liberty-mutual-insurance-quotes-api-openapi.yml",
+    "liberty-mutual-insurance-safety-api-openapi.yml"
+  ],
+  "outputs": [
+    "liberty-mutual-insurance-data-api-openapi.yml",
+    "liberty-mutual-insurance-policies-api-openapi.yml",
+    "liberty-mutual-insurance-quotes-api-openapi.yml",
+    "liberty-mutual-insurance-safety-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
