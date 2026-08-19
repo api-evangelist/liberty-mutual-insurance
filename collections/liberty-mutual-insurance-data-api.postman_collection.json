@@ -1,0 +1,125 @@
+{
+  "item": [
+    {
+      "id": "7728f7e0-6504-4660-82ff-dae5b0393152",
+      "name": "Data",
+      "description": {
+        "content": "Incident data operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6dae2344-3f39-43e4-87c9-ecfa4261694f",
+          "name": "Get Incidents",
+          "request": {
+            "name": "Get Incidents",
+            "description": {
+              "content": "Retrieve auto theft, crash, and citation data.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "data",
+                "incidents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "city",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "53d96def-7ff3-4059-9b83-609d9c5574a1",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "incidents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"incidents\": [\n    {\n      \"id\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"date\": \"2021-03-24\",\n      \"description\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"date\": \"1997-01-09\",\n      \"description\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.libertymutual.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9a1b5dbe-464a-467b-81b1-06851583a8d0",
+    "name": "Liberty Mutual Renters Insurance Data API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Liberty Mutual Renters Insurance API enables partners to offer affordable renters insurance with an easy quote and bind experience.\n\nContact Support:\n Name: Liberty Mutual",
+      "type": "text/plain"
+    }
+  }
+}

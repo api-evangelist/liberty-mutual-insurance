@@ -1,0 +1,218 @@
+{
+  "item": [
+    {
+      "id": "98048904-1189-44d3-bbaf-be82736794d4",
+      "name": "Safety",
+      "description": {
+        "content": "Safety analysis operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "97626348-6284-4ac0-af8d-6b9b093e9180",
+          "name": "Get Safe Routes",
+          "request": {
+            "name": "Get Safe Routes",
+            "description": {
+              "content": "Retrieve safest driving routes for a given area.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "safety",
+                "routes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "city",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "origin",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "destination",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8fbea80c-76ff-48e0-9801-2fb6fbb3c61c",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "safety",
+                    "routes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "origin",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "destination",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"routes\": [\n    {\n      \"id\": \"string\",\n      \"origin\": \"string\",\n      \"destination\": \"string\",\n      \"safetyScore\": 3347.015739559166,\n      \"distance\": 9178.968208127382\n    },\n    {\n      \"id\": \"string\",\n      \"origin\": \"string\",\n      \"destination\": \"string\",\n      \"safetyScore\": 3482.2986972851454,\n      \"distance\": 499.85342948772217\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "59a8a70c-053a-4e3c-a45a-10bdb071b7b9",
+          "name": "Get Safe Parking",
+          "request": {
+            "name": "Get Safe Parking",
+            "description": {
+              "content": "Retrieve safest parking locations in a city.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "safety",
+                "parking"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "city",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7d1c309e-6092-4bd7-a4e4-f63e16f5a9f9",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "safety",
+                    "parking"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"locations\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"safetyScore\": 175.01971483818713,\n      \"theftRate\": 9065.531170138784\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"safetyScore\": 8186.676368403037,\n      \"theftRate\": 2334.8758784431757\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.libertymutual.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b7300503-f4c3-49eb-bac8-9b4515e3ca56",
+    "name": "Liberty Mutual Renters Insurance Data Safety API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Liberty Mutual Renters Insurance API enables partners to offer affordable renters insurance with an easy quote and bind experience.\n\nContact Support:\n Name: Liberty Mutual",
+      "type": "text/plain"
+    }
+  }
+}
