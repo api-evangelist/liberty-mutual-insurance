@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Liberty Mutual Renters Insurance Data Quotes API
+  title: Liberty Mutual Renters Insurance Quotes API
   description: The Liberty Mutual Renters Insurance API enables partners to offer affordable renters insurance with an easy quote and bind experience.
   version: 1.0.0
   contact:
@@ -55,6 +55,22 @@ paths:
                 $ref: '#/components/schemas/Quote'
 components:
   schemas:
+    Quote:
+      type: object
+      properties:
+        quoteId:
+          type: string
+        premium:
+          type: number
+        coverageAmount:
+          type: number
+        deductible:
+          type: number
+        term:
+          type: string
+        expiresAt:
+          type: string
+          format: date-time
     QuoteRequest:
       type: object
       properties:
@@ -73,19 +89,3 @@ components:
           type: number
         deductible:
           type: number
-    Quote:
-      type: object
-      properties:
-        quoteId:
-          type: string
-        premium:
-          type: number
-        coverageAmount:
-          type: number
-        deductible:
-          type: number
-        term:
-          type: string
-        expiresAt:
-          type: string
-          format: date-time
