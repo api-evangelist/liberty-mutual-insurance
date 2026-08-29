@@ -103,6 +103,9 @@ apis:
   - type: Documentation
     url: https://developer.libertymutual.com/
 common:
+  - type: CapabilityMap
+    url: capabilities/liberty-mutual-insurance-capability-edges.yml
+    name: Liberty Mutual Insurance Business Capability Map
   - type: AgenticAccess
     url: agentic-access/liberty-mutual-insurance-agentic-access.yml
   - type: DomainSecurity
