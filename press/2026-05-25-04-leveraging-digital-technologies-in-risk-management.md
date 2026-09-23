@@ -1,7 +1,9 @@
 ---
 title: Leveraging digital technologies in risk management
 url: https://www.libertyspecialtymarkets.com/article/embracing-the-future-leveraging-digital-technologies-in-risk-management
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Liberty Mutual Insurance Group" press release artificial intelligence'
 position: 4
 source: serpapi-google

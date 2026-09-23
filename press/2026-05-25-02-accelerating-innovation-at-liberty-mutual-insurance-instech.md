@@ -1,7 +1,9 @@
 ---
 title: Accelerating innovation at Liberty Mutual Insurance | InsTech
 url: https://www.instech.co/knowledge-centre/accelerating-innovation-at-liberty-mutual-insurance/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Liberty Mutual Insurance Group" press release artificial intelligence'
 position: 2
 source: serpapi-google

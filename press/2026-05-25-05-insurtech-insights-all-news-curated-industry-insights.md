@@ -1,7 +1,9 @@
 ---
 title: Insurtech Insights | All News - Curated industry insights
 url: https://www.insurtechinsights.com/news-insights/all-news/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Liberty Mutual Insurance Group" press release artificial intelligence'
 position: 5
 source: serpapi-google
