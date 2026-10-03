@@ -63,20 +63,6 @@ paths:
                 $ref: '#/components/schemas/ParkingList'
 components:
   schemas:
-    ParkingList:
-      type: object
-      properties:
-        locations:
-          type: array
-          items:
-            $ref: '#/components/schemas/ParkingLocation'
-    RouteList:
-      type: object
-      properties:
-        routes:
-          type: array
-          items:
-            $ref: '#/components/schemas/Route'
     ParkingLocation:
       type: object
       properties:
@@ -103,3 +89,17 @@ components:
           type: number
         distance:
           type: number
+    ParkingList:
+      type: object
+      properties:
+        locations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParkingLocation'
+    RouteList:
+      type: object
+      properties:
+        routes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Route'
