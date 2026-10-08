@@ -104,6 +104,12 @@ apis:
   - type: Documentation
     url: https://developer.libertymutual.com/
 common:
+  - type: Plans
+    url: plans/liberty-mutual-insurance-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/liberty-mutual-insurance-rate-limits.yml
+  - type: FinOps
+    url: finops/liberty-mutual-insurance-finops.yml
   - type: CapabilityMap
     url: capabilities/liberty-mutual-insurance-capability-edges.yml
     name: Liberty Mutual Insurance Business Capability Map
