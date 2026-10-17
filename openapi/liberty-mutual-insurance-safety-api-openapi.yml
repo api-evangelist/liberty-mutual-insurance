@@ -63,26 +63,6 @@ paths:
                 $ref: '#/components/schemas/ParkingList'
 components:
   schemas:
-    ParkingList:
-      type: object
-      properties:
-        locations:
-          type: array
-          items:
-            $ref: '#/components/schemas/ParkingLocation'
-    ParkingLocation:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        address:
-          type: string
-        safetyScore:
-          type: number
-        theftRate:
-          type: number
     Route:
       type: object
       properties:
@@ -103,3 +83,23 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Route'
+    ParkingLocation:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        address:
+          type: string
+        safetyScore:
+          type: number
+        theftRate:
+          type: number
+    ParkingList:
+      type: object
+      properties:
+        locations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParkingLocation'

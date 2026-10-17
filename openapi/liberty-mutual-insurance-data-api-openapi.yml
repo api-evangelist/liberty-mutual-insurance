@@ -43,6 +43,13 @@ paths:
                 $ref: '#/components/schemas/IncidentList'
 components:
   schemas:
+    IncidentList:
+      type: object
+      properties:
+        incidents:
+          type: array
+          items:
+            $ref: '#/components/schemas/Incident'
     Incident:
       type: object
       properties:
@@ -57,10 +64,3 @@ components:
           format: date
         description:
           type: string
-    IncidentList:
-      type: object
-      properties:
-        incidents:
-          type: array
-          items:
-            $ref: '#/components/schemas/Incident'
