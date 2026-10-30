@@ -1,4 +1,4 @@
-# Liberty Mutual Insurance (liberty-mutual-insurance)
+# Liberty Mutual Insurance
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,83 +66,120 @@
 
 Liberty Mutual Insurance Group is one of the largest global property and casualty insurers, headquartered in Boston, Massachusetts. The company offers a wide range of insurance products and services, including personal automobile, homeowners, workers compensation, and commercial lines, and exposes API-based insurance solutions for partners across the insurance lifecycle from quote-and-purchase through policyholder service and claims.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/liberty-mutual-insurance/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/liberty-mutual-insurance/refs/heads/main/apis.yml)
+**Areas:** Casualty · Commercial Lines · Insurance · Personal Lines · Property · Renters · Safety Data · Fortune 100 · Property and Casualty
 
-## Scope
+## Liberty Mutual Insurance on APIs.io
 
-- **Position:** Producer
-- **Access:** 3rd-Party
+Everything profiled for Liberty Mutual Insurance is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/liberty-mutual-insurance/](https://apis.io/providers/liberty-mutual-insurance/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Casualty
-- Commercial Lines
-- Insurance
-- Personal Lines
-- Property
-- Renters
-- Safety Data
+- [Liberty Mutual Insurance Data API](https://apis.io/apis/liberty-mutual-insurance/liberty-mutual-insurance-data-api/) — Incident data operations
+- [Liberty Mutual Insurance Policies API](https://apis.io/apis/liberty-mutual-insurance/liberty-mutual-insurance-policies-api/) — Policy management operations
+- [Liberty Mutual Insurance Quotes API](https://apis.io/apis/liberty-mutual-insurance/liberty-mutual-insurance-quotes-api/) — Insurance quote operations
+- [Liberty Mutual Insurance Safety API](https://apis.io/apis/liberty-mutual-insurance/liberty-mutual-insurance-safety-api/) — Safety analysis operations
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Liberty Mutual Renters Insurance API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Liberty Mutual Renters Insurance API streamlines the process to purchase coverage, allowing partners to offer affordable renters insurance to customers, tenants, and employees with an easy quote and bind experience integrated into websites, apps, or tools.
+- [Liberty Mutual Insurance Agentic Access](https://apis.io/agentic-access/liberty-mutual-insurance/liberty-mutual-insurance-agentic-access/)
 
-- **Human URL:** [https://www.libertymutual.com/renters-api](https://www.libertymutual.com/renters-api)
-- **Base URL:** `https://api.libertymutual.com`
+#### Collections (6)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Bind
-- Insurance
-- Quote
-- Renters
+- [Liberty Mutual Renters Insurance Data API](https://apis.io/collections/liberty-mutual-insurance/open-liberty-mutual-insurance-data-api/)
+- [Liberty Mutual Renters Insurance Data Policies API](https://apis.io/collections/liberty-mutual-insurance/open-liberty-mutual-insurance-policies-api/)
+- [Liberty Mutual Renters Insurance Data Quotes API](https://apis.io/collections/liberty-mutual-insurance/open-liberty-mutual-insurance-quotes-api/)
+- [Liberty Mutual Renters Insurance API](https://apis.io/collections/liberty-mutual-insurance/open-liberty-mutual-insurance-renters-insurance-api/)
+- [Liberty Mutual Renters Insurance Data Safety API](https://apis.io/collections/liberty-mutual-insurance/open-liberty-mutual-insurance-safety-api/)
+- [Liberty Mutual Solaria Labs API](https://apis.io/collections/liberty-mutual-insurance/open-liberty-mutual-insurance-solaria-labs-api/)
 
-#### Properties
+#### Security (1)
 
-- [Documentation](https://www.libertymutual.com/renters-api)
-- [OpenAPI](openapi/liberty-mutual-insurance-renters-insurance-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/liberty-mutual-insurance-renters-insurance-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/liberty-mutual-insurance-renters-insurance-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Liberty Mutual Solaria Labs API
+- [Liberty Mutual Insurance Domain Security](https://apis.io/security/liberty-mutual-insurance/liberty-mutual-insurance-domain-security/)
 
-The Liberty Mutual Solaria Labs API aggregates public data on auto theft, parking citations, and crashes using proprietary insurance knowledge. Developers and data scientists can analyze the data to identify safest driving routes and places to park in major US cities.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://developer.libertymutual.com/](https://developer.libertymutual.com/)
-- **Base URL:** `https://developers.solarialabs.com`
+Published plans, tiers and prices.
 
-#### Tags
+- [Liberty Mutual Insurance Plans Pricing](https://apis.io/plans/liberty-mutual-insurance/liberty-mutual-insurance-plans-pricing/)
 
-- Data Analytics
-- Innovation
-- Insurance
-- Safety
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://developer.libertymutual.com/)
-- [OpenAPI](openapi/liberty-mutual-insurance-solaria-labs-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/liberty-mutual-insurance-solaria-labs-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/liberty-mutual-insurance-solaria-labs-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Liberty Mutual Insurance Rate Limits](https://apis.io/rate-limits/liberty-mutual-insurance/liberty-mutual-insurance-rate-limits/)
 
-## Common Properties
+#### FinOps (1)
 
-- [GitHub Organization](https://github.com/libertymutual)
-- [LinkedIn](https://www.linkedin.com/company/liberty-mutual-insurance)
+What the API costs to run, by operation.
+
+- [Liberty Mutual Insurance Finops](https://apis.io/finops/liberty-mutual-insurance/liberty-mutual-insurance-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.libertymutual.com/)
-- [Developer](https://developer.libertymutual.com/)
-- [About](https://www.libertymutual.com/about-lm)
-- [News](https://www.libertymutual.com/about-lm/newsroom)
-- [Integrations](https://www.libertymutual.com/ecosystem)
+- [GitHub](https://github.com/libertymutual)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 19.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 67.0 |
+| Contract quality | 43.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 5.3 |
+
+**Agent readiness 15.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.3** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/liberty-mutual-insurance/](https://apis.io/providers/liberty-mutual-insurance/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Liberty Mutual Insurance: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/liberty-mutual-insurance/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
